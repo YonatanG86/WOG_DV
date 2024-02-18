@@ -1,5 +1,5 @@
 import os
-from utilities.utils import SCORES_FILE_NAME
+from utilities.utils import SCORES_FILE_NAME, BAD_RETURN_CODE
 
 
 def _calculate_points(difficulty):
@@ -20,6 +20,6 @@ def get_score():
         with open(SCORES_FILE_NAME, "r") as file:
             current_score = int(file.read())
     else:
-        current_score = "File Error"
+        current_score = BAD_RETURN_CODE
 
     return current_score
