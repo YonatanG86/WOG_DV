@@ -23,7 +23,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'python ./test/e2e.py || true'
+                sh 'python ./tests/e2e.py || true'
             }
         }
 
