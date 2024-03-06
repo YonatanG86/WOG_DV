@@ -11,4 +11,4 @@ __pycache__/
 
 *.pyc
 
-Scores.txt
+#Scores.txt
