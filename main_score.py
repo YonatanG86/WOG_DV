@@ -1,8 +1,12 @@
 from flask import Flask
-from utilities.score import get_score
+from utilities.score import get_score, signal_handler
 from utilities.utils import BAD_RETURN_CODE
+import signal
 
 app = Flask(__name__)
+
+
+signal.signal(signal.SIGINT, signal_handler)
 
 
 @app.route('/')

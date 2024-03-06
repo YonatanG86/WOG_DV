@@ -1,5 +1,11 @@
 import os
 from utilities.utils import SCORES_FILE_NAME, BAD_RETURN_CODE
+import signal
+
+
+def signal_handler(sig, frame):
+    print('Signal', sig, 'received. Exiting gracefully.')
+    return get_score()
 
 
 def _calculate_points(difficulty):
